@@ -34,3 +34,12 @@ function convertToPercentage(total, progress) {
   const roundedResult = Math.round(result);
   return roundedResult;
 }
+
+/** Kollar om dagens datum infaller mellan två angivna datum */
+function isCourseActive(start, stop) {
+  if (currentDate > start && currentDate < stop) {
+    console.log("Det är mellan de aktuella datumen");
+  } else {
+    console.log("Datumet är inte mellan de aktuella datumen");
+  }
+}
