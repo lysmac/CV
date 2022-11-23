@@ -8,14 +8,18 @@ function main() {
 
 const startDate = new Date("2022-10-31");
 const endDate = new Date("2023-02-03");
-
 const currentDate = new Date();
 
+const totalCourseLength = dateDifferential(startDate, endDate);
+const courseProgress = dateDifferential(startDate, currentDate);
+
+/**Tar ett datum och gör det till dagar istället för MS  */
 function dateStringToDays(dirtyDate) {
   const cleanedDate = Math.ceil(dirtyDate / (1000 * 60 * 60 * 24));
   return cleanedDate;
 }
 
+/** Räknar ut differensen mellan två datum */
 function dateDifferential(dateOne, dateTwo) {
   const dateOneClean = dateStringToDays(dateOne);
   const dateTwoClean = dateStringToDays(dateTwo);
@@ -24,10 +28,9 @@ function dateDifferential(dateOne, dateTwo) {
   return differential;
 }
 
-const totalCourseLength = dateDifferential(startDate, endDate);
-const courseProgress = dateDifferential(startDate, currentDate);
-
+/** Hur stor del av progress är i procent av total. Rundar också av */
 function convertToPercentage(total, progress) {
   const result = (progress * 100) / total;
-  return result;
+  const roundedResult = Math.round(result);
+  return roundedResult;
 }
