@@ -9,3 +9,42 @@
   width: 10%;
   background-color: green;
 }
+
+/* #findus:hover + #myface {
+  background: #ccc;
+}
+
+#wille:hover > div#ansiktet {
+  background-color: rebeccapurple;
+} */
+
+.carlitoface {
+  background-image: url(img/carlito.jpeg);
+  background-size: cover;
+}
+.findusface {
+  background-image: url(img/findus.JPG);
+  background-size: cover;
+}
+.willeface {
+  background-image: url(img/wille.jpeg);
+  background-size: cover;
+}
+
+#myface {
+  width: 10rem;
+  height: 10rem;
+}
+
+#findus {
+  background-image: url(img/findus-icon.png);
+  background-size: cover;
+  width: 10rem;
+  height: 10rem;
+}
+#wille {
+  background-image: url(img/wille-icon.png);
+  background-size: cover;
+  width: 10rem;
+  height: 10rem;
+}

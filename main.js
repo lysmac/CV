@@ -4,6 +4,28 @@ function main() {
   const progress = convertToPercentage(totalCourseLength, courseProgress);
   console.log(progress);
   document.getElementById("progress").style.width = `${progress}%`;
+
+  myEventListeners();
+}
+
+function myEventListeners() {
+  const findus = document.getElementById("findus");
+  const wille = document.getElementById("wille");
+  const myface = document.getElementById("myface");
+
+  findus.addEventListener("mouseover", () => {
+    myface.classList.toggle("findusface");
+  });
+  findus.addEventListener("mouseout", () => {
+    myface.classList.toggle("findusface");
+  });
+
+  wille.addEventListener("mouseover", () => {
+    myface.classList.toggle("willeface");
+  });
+  wille.addEventListener("mouseout", () => {
+    myface.classList.toggle("willeface");
+  });
 }
 
 const startDate = new Date("2022-10-31");
