@@ -1,3 +1,15 @@
+#activeCourses {
+  background-color: yellow;
+}
+
+#completedCourses {
+  background-color: green;
+}
+
+#remainingCourses {
+  background-color: aquamarine;
+}
+
 #progressBar {
   width: 500px;
   height: 40px;
@@ -9,14 +21,17 @@
   width: 10%;
   background-color: green;
 }
-
-/* #findus:hover + #myface {
-  background: #ccc;
+.progressBarGenerated {
+  width: 500px;
+  height: 40px;
+  background-color: black;
 }
 
-#wille:hover > div#ansiktet {
-  background-color: rebeccapurple;
-} */
+.progressGenerated {
+  height: 100%;
+  width: 10%;
+  background-color: green;
+}
 
 .carlitoface {
   background-image: url(img/carlito.jpeg);
@@ -36,15 +51,19 @@
   height: 10rem;
 }
 
+#cats {
+  display: flex;
+}
+
 #findus {
   background-image: url(img/findus-icon.png);
   background-size: cover;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
 }
 #wille {
   background-image: url(img/wille-icon.png);
   background-size: cover;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
 }

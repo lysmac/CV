@@ -6,6 +6,8 @@ function main() {
   document.getElementById("progress").style.width = `${progress}%`;
 
   myEventListeners();
+
+  addActiveCourses();
 }
 
 function myEventListeners() {
@@ -25,6 +27,40 @@ function myEventListeners() {
   });
   wille.addEventListener("mouseout", () => {
     myface.classList.toggle("willeface");
+  });
+}
+
+const allMyCourses = [
+  {
+    courseName: "HTML och CSS",
+    startDate: new Date("2022-09-14"),
+    endDate: new Date("2022-10-07"),
+  },
+  {
+    courseName: "JavaScript Grundkurs",
+    startDate: new Date("2022-11-01"),
+    endDate: new Date("2023-02-03"),
+  },
+  {
+    courseName: "JavaScript Fördjupning",
+    startDate: new Date("2023-02-06"),
+    endDate: new Date("2023-03-31"),
+  },
+];
+
+function addActiveCourses() {
+  allMyCourses.forEach((value) => {
+    if (isCourseActive(value.startDate, value.endDate)) {
+      document.getElementById("activeCourses").innerHTML += `
+      <div>
+      ${value.courseName}
+      </div>`;
+    } else {
+      document.getElementById("completedCourses").innerHTML += `
+      <div>
+      ${value.courseName}
+      </div>`;
+    }
   });
 }
 
@@ -59,9 +95,11 @@ function convertToPercentage(total, progress) {
 
 /** Kollar om dagens datum infaller mellan två angivna datum */
 function isCourseActive(start, stop) {
+  let isDateActive;
   if (currentDate > start && currentDate < stop) {
-    console.log("Det är mellan de aktuella datumen");
+    isDateActive = true;
   } else {
-    console.log("Datumet är inte mellan de aktuella datumen");
+    isDateActive = false;
   }
+  return isDateActive;
 }
