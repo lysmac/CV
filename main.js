@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", main);
 
 function main() {
   const progress = convertToPercentage(totalCourseLength, courseProgress);
-  console.log(progress);
+  console.log("progress-main", progress);
   document.getElementById("progress").style.width = `${progress}%`;
 
   myEventListeners();
@@ -53,7 +53,11 @@ function addActiveCourses() {
     if (isCourseActive(value.startDate, value.endDate)) {
       document.getElementById("activeCourses").innerHTML += `
       <div>
-      ${value.courseName}
+      ${value.courseName} <br>
+      ${progressBarFunction(value.startDate, value.endDate)} %
+      <br>
+      ${value.endDate}
+      
       </div>`;
     } else {
       document.getElementById("completedCourses").innerHTML += `
@@ -70,6 +74,17 @@ const currentDate = new Date();
 
 const totalCourseLength = dateDifferential(startDate, endDate);
 const courseProgress = dateDifferential(startDate, currentDate);
+
+function progressBarFunction(start, end) {
+  const dagensDatum = new Date();
+  const totalKurslangd = dateDifferential(start, end);
+  const kursProgression = dateDifferential(start, dagensDatum);
+
+  const hurGarDet = convertToPercentage(totalKurslangd, kursProgression);
+  console.log(hurGarDet);
+  return hurGarDet;
+  // document.getElementById("progress").style.width = `${progress}%`;
+}
 
 /**Tar ett datum och gör det till dagar istället för MS  */
 function dateStringToDays(dirtyDate) {
