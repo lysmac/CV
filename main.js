@@ -33,23 +33,58 @@ function myEventListeners() {
 const allMyCourses = [
   {
     courseName: "HTML och CSS",
-    startDate: new Date("2022-09-14"),
+    startDate: new Date("2022-09-12"),
     endDate: new Date("2022-10-07"),
   },
   {
     courseName: "UX och Usability",
     startDate: new Date("2022-10-10"),
-    endDate: new Date("2022-10-31"),
+    endDate: new Date("2022-10-28"),
   },
   {
     courseName: "JavaScript Grundkurs",
-    startDate: new Date("2022-11-01"),
+    startDate: new Date("2022-10-31"),
     endDate: new Date("2023-02-03"),
   },
   {
     courseName: "JavaScript Fördjupning",
     startDate: new Date("2023-02-06"),
     endDate: new Date("2023-03-31"),
+  },
+  {
+    courseName: "Dynamisk Webbutveckling",
+    startDate: new Date("2023-04-03"),
+    endDate: new Date("2023-06-02"),
+  },
+  {
+    courseName: "Grafiska verktyg för Gränssnittsdesign",
+    startDate: new Date("2023-06-05"),
+    endDate: new Date("2023-08-18"),
+  },
+  {
+    courseName: "Projektarbete med agila metoder",
+    startDate: new Date("2023-08-21"),
+    endDate: new Date("2023-09-08"),
+  },
+  {
+    courseName: "LIA 1",
+    startDate: new Date("2023-09-11"),
+    endDate: new Date("2023-11-17"),
+  },
+  {
+    courseName: "Arbetsmetodik för Utvecklare",
+    startDate: new Date("2023-11-20"),
+    endDate: new Date("2023-12-15"),
+  },
+  {
+    courseName: "Examensarbete",
+    startDate: new Date("2023-12-04"),
+    endDate: new Date("2024-01-26"),
+  },
+  {
+    courseName: "LIA 2",
+    startDate: new Date("2024-01-29"),
+    endDate: new Date("2024-05-17"),
   },
 ];
 
@@ -84,6 +119,9 @@ const startDate = new Date("2022-10-31");
 const endDate = new Date("2023-02-03");
 const currentDate = new Date();
 
+const educationStart = new Date("2022-09-12");
+const educationEnd = new Date("2024-05-17");
+
 const totalCourseLength = dateDifferential(startDate, endDate);
 const courseProgress = dateDifferential(startDate, currentDate);
 
@@ -95,7 +133,6 @@ function progressBarFunction(start, end) {
   const hurGarDet = convertToPercentage(totalKurslangd, kursProgression);
   console.log(hurGarDet);
   return hurGarDet;
-  // document.getElementById("progress").style.width = `${progress}%`;
 }
 
 /**Tar ett datum och gör det till dagar istället för MS  */
