@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+
+#splash {
+  font-family: "Vollkorn", serif;
+  font-size: 8rem;
+}
+
+#aboutMe {
+  background: #ccc;
+}
+
 #activeCourses {
   background-color: yellow;
 }
@@ -52,18 +63,17 @@
 }
 
 #cats {
-  display: flex;
+  height: 3rem;
+  width: 100%;
+  background-color: red;
 }
-
 #findus {
   background-image: url(img/findus-icon.png);
-  background-size: cover;
-  width: 5rem;
-  height: 5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #wille {
   background-image: url(img/wille-icon.png);
-  background-size: cover;
-  width: 5rem;
-  height: 5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
