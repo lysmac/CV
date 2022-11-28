@@ -37,6 +37,11 @@ const allMyCourses = [
     endDate: new Date("2022-10-07"),
   },
   {
+    courseName: "UX och Usability",
+    startDate: new Date("2022-10-10"),
+    endDate: new Date("2022-10-31"),
+  },
+  {
     courseName: "JavaScript Grundkurs",
     startDate: new Date("2022-11-01"),
     endDate: new Date("2023-02-03"),
@@ -50,8 +55,14 @@ const allMyCourses = [
 
 function addActiveCourses() {
   allMyCourses.forEach((value) => {
-    if (isCourseActive(value.startDate, value.endDate)) {
-      document.getElementById("activeCourses").innerHTML += `
+    if (value.startDate > currentDate) {
+      document.getElementById("remainingCourses").innerHTML += `
+      <div>
+      ${value.courseName}
+      </div>`;
+    } else {
+      if (isCourseActive(value.startDate, value.endDate)) {
+        document.getElementById("activeCourses").innerHTML += `
       <div>
       ${value.courseName} <br>
       ${progressBarFunction(value.startDate, value.endDate)} %
@@ -59,11 +70,12 @@ function addActiveCourses() {
       ${value.endDate}
       
       </div>`;
-    } else {
-      document.getElementById("completedCourses").innerHTML += `
+      } else {
+        document.getElementById("completedCourses").innerHTML += `
       <div>
       ${value.courseName}
       </div>`;
+      }
     }
   });
 }
