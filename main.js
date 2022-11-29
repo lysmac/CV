@@ -61,6 +61,7 @@ const allMyCourses = [
     startDate: new Date("2023-06-05"),
     endDate: new Date("2023-08-18"),
   },
+
   {
     courseName: "Projektarbete med agila metoder",
     startDate: new Date("2023-08-21"),

@@ -8,11 +8,27 @@
     <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/b58d9b0d5f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div id="splashScreen" class="bg-blue-400">
-      <h1 id="splash" class="hiddenContent">Carl Hasselblad</h1>
+    <div id="splashScreen">
+      <div id="splashContentWrapper">
+        <p id="splashName">Carl Hasselblad</p>
+        <p id="splashSubtext">
+          Front End Developer-student <br />
+          @ <a href="https://medieinstitutet.se/"> medieinstitutet</a>
+        </p>
+      </div>
+      <div id="contactIcons">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
     </div>
+
     <nav
       class="sticky top-0 opacity-75 h-10 min-w-full bg-gray-800 color text-slate-100"
     >
@@ -31,9 +47,9 @@
           </div>
         </div>
 
-        <div id="progressBar" class="rounded-xl">
+        <!-- <div id="progressBar" class="rounded-xl">
           <div id="progress"></div>
-        </div>
+        </div> -->
 
         <div id="activeCourses">Aktiva kurser</div>
         <div id="completedCourses">Färdiga kurser</div>

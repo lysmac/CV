@@ -1,16 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #splashScreen {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+  background-color: #5efce8;
+  background-image: linear-gradient(161deg, #5efce8 0%, #736efe 100%);
+  font-family: "Vollkorn", serif;
+  color: white;
+}
+#splashScreen a:link,
+#splashScreen a:visited,
+#splashScreen a:hover {
+  text-decoration: underline;
 }
 
-#splash {
-  font-family: "Vollkorn", serif;
-  font-size: 5rem;
-  animation: fade 5s;
+#splashName {
+  font-size: clamp(1rem, 10vw, 10rem);
+  animation: 3s fade;
+}
+
+#splashSubtext {
+  font-size: clamp(1.2rem, 4vw, 5rem);
+  animation: 3s 1.5s fade forwards;
+  opacity: 0;
 }
 
 @keyframes fade {
@@ -20,6 +40,12 @@
   100% {
     opacity: 1;
   }
+}
+
+#contactIcons {
+  font-size: clamp(1.2rem, 3vw, 6rem);
+  position: absolute;
+  bottom: 2rem;
 }
 
 #aboutMe {
