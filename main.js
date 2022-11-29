@@ -4,9 +4,7 @@ function main() {
   const progress = convertToPercentage(totalCourseLength, courseProgress);
   console.log("progress-main", progress);
   document.getElementById("progress").style.width = `${progress}%`;
-
   myEventListeners();
-
   addActiveCourses();
 }
 

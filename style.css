@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,9 +20,9 @@ body {
   font-family: "Vollkorn", serif;
   color: white;
 }
-#splashScreen a:link,
-#splashScreen a:visited,
-#splashScreen a:hover {
+#splashSubtext a:link,
+#splashSubtext a:visited,
+#splashSubtext a:hover {
   text-decoration: underline;
 }
 
@@ -42,11 +46,46 @@ body {
   }
 }
 
+#arrowDown {
+  font-size: clamp(1.2rem, 7vw, 7rem);
+  position: absolute;
+  bottom: 1rem;
+  /* animation: 3s 1.5s fade forwards; */
+  /* opacity: 0; */
+}
+
 #contactIcons {
   font-size: clamp(1.2rem, 3vw, 6rem);
-  position: absolute;
-  bottom: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  padding: 1rem;
 }
+
+/* .tooltip {
+  width: 100%;
+  position: absolute;
+  top: -2.3rem;
+  padding: 0.3rem;
+  font-size: clamp(0.4rem, 1.1vw, 1.2rem);
+  color: black;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  height: clamp(0.4rem, 1.1vw, 1.2rem);
+  width: clamp(0.4rem, 1.1vw, 1.2rem);
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: -1;
+} */
 
 #aboutMe {
   background: #ccc;
@@ -65,7 +104,7 @@ body {
 }
 
 #progressBar {
-  width: 500px;
+  width: 100%;
   height: 40px;
   background-color: black;
 }
@@ -76,7 +115,7 @@ body {
   background-color: green;
 }
 .progressBarGenerated {
-  width: 500px;
+  width: 100%;
   height: 40px;
   background-color: black;
 }
