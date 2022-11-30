@@ -100,8 +100,7 @@ function addActiveCourses() {
       <div>
       ${value.courseName} <br>
       ${progressBarFunction(value.startDate, value.endDate)} %
-      <br>
-      ${value.endDate}
+      
       
       </div>`;
       } else {

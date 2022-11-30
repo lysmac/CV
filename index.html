@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" media="(max-width:50rem)" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script
       src="https://kit.fontawesome.com/b58d9b0d5f.js"
       crossorigin="anonymous"
@@ -15,7 +16,7 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <div id="splashScreen">
+    <div id="splashScreen" class="flexDirectionColumn">
       <div id="splashContentWrapper">
         <p id="splashName">Carl Hasselblad</p>
         <p id="splashSubtext">
@@ -25,7 +26,7 @@
       </div>
 
       <div id="arrowDown">
-        <a href="#myface">
+        <a href="#bubble">
           <i class="fa-solid fa-arrow-down"></i>
         </a>
       </div>
@@ -42,33 +43,80 @@
       </div>
     </div>
 
-    <nav
-      class="sticky top-0 opacity-75 h-10 min-w-full bg-gray-800 color text-slate-100"
-    >
-      Detta är min meny
-    </nav>
-    <div class="min-h-screen bg-yellow-400">
-      <div style="display: flex; flex-direction: column">
-        <div id="aboutMe" class="w-fit p-4 rounded-md">
-          <div
-            id="myface"
-            class="carlitoface rounded-full border-blue-600 border-4"
-          ></div>
-          <div id="cats" class="flex">
-            <div id="findus" class="flex-1"></div>
-            <div id="wille" class="flex-1"></div>
+    <div id="wrapper" class="flexDirectionColumn">
+      <div class="content flexDirectionRow">
+        <div id="textAboutMe">
+          <h3 id="start">Kort om mig</h3>
+          <p>
+            Hallå där! Jag är en kille från Göteborg som nu pluggar till Front
+            End-Utvecklare på medieinstitutet. Mitt IT-intresse är sedan
+            tidigare stort och jag har alltid haft ett intresse för datorer,
+            problemlösning och design.
+          </p>
+          <p>
+            När jag inte studerar gillar jag att se på fotboll, Liverpool FC är
+            laget i mitt hjärta. Matlagning är också ett stort intresse som jag
+            lägger rätt mycket tid på.
+          </p>
+          <p>Söker just nu LIA för hösten 2023!</p>
+        </div>
+        <div id="aboutMe">
+          <div id="myface" class="carlitoface"></div>
+
+          <div id="cats" class="flexDirectionRow">
+            <div id="bubble" class="tooltip">Klappa gärna</div>
+            <div id="findus"></div>
+            <div id="wille"></div>
           </div>
         </div>
+      </div>
 
-        <div id="progressBar" class="rounded-xl">
-          <div id="progress"></div>
+      <div class="content flexDirectionColumn">
+        <h3>Utbildning</h3>
+        <div class="courseDiv flexDirectionRow">
+          <div id="activeCoursesWrapper" class="flexOne courseHeaders">
+            Aktiva kurser
+            <div id="activeCourses"></div>
+          </div>
+          <div id="completedCoursesWrapper" class="flexOne courseHeaders">
+            Avklarade kurser
+            <div id="completedCourses"></div>
+          </div>
+          <div id="remainingCoursesWrapper" class="flexOne courseHeaders">
+            Återstående kurser
+            <div id="remainingCourses"></div>
+          </div>
         </div>
+      </div>
 
-        <div id="activeCourses">Aktiva kurser</div>
-        <div id="completedCourses">Färdiga kurser</div>
-        <div id="remainingCourses">Återstående kurser</div>
+      <div class="content flexDirectionRow">
+        <div id="textAboutMe">
+          <h3>Kort om mig</h3>
+          <p>
+            Hallå där! Jag är en kille från Göteborg som nu pluggar till Front
+            End-Utvecklare på medieinstitutet. Mitt IT-intresse är sedan
+            tidigare stort och jag har alltid haft ett intresse för datorer,
+            problemlösning och design.
+          </p>
+          <p>
+            När jag inte studerar gillar jag att se på fotboll, Liverpool FC är
+            laget i mitt hjärta. Matlagning är också ett stort intresse som jag
+            lägger rätt mycket tid på.
+          </p>
+          <p>Söker just nu LIA för hösten 2023!</p>
+        </div>
+        <div id="aboutMe">
+          <div id="myface" class="carlitoface"></div>
+          <div id="cats" class="flexDirectionRow">
+            <div id="findus"></div>
+            <div id="wille"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="min-h-screen bg-green-400"></div>
+
+    <div id="progressBar">
+      <div id="progress"></div>
+    </div>
   </body>
 </html>

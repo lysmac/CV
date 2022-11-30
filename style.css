@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -6,24 +7,51 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  background-color: #736efe;
+  font-size: 1rem;
+}
+body a:link,
+body a:visited,
+body a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: "Righteous", cursive;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  top: -2.8rem;
+  left: 0;
+}
+
+.flexDirectionRow {
+  display: flex;
+  flex-direction: row;
+}
+.flexDirectionColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexOne {
+  flex: 1;
 }
 
 #splashScreen {
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
   background-color: #5efce8;
   background-image: linear-gradient(161deg, #5efce8 0%, #736efe 100%);
   font-family: "Vollkorn", serif;
   color: white;
 }
-#splashSubtext a:link,
-#splashSubtext a:visited,
-#splashSubtext a:hover {
-  text-decoration: underline;
+
+#splashScreen p {
+  margin: 0;
 }
 
 #splashName {
@@ -50,45 +78,111 @@ body {
   font-size: clamp(1.2rem, 7vw, 7rem);
   position: absolute;
   bottom: 1rem;
-  /* animation: 3s 1.5s fade forwards; */
-  /* opacity: 0; */
+  animation: 3s 1.5s fade forwards;
+  opacity: 0;
 }
 
 #contactIcons {
   font-size: clamp(1.2rem, 3vw, 6rem);
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-
-  padding: 1rem;
+  position: absolute;
+  bottom: 2.3rem;
+  right: 2rem;
 }
 
-/* .tooltip {
+#contactIcons a:link,
+#contactIcons a:visited,
+#contactIcons a:hover {
+  text-decoration: none;
+}
+
+nav {
+  background: #ffcc88;
   width: 100%;
-  position: absolute;
-  top: -2.3rem;
-  padding: 0.3rem;
-  font-size: clamp(0.4rem, 1.1vw, 1.2rem);
-  color: black;
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
-  z-index: 1;
 }
 
-.tooltip::before {
-  content: " ";
-  position: absolute;
-  bottom: -2px;
-  height: clamp(0.4rem, 1.1vw, 1.2rem);
-  width: clamp(0.4rem, 1.1vw, 1.2rem);
-  background-color: white;
-  transform: rotate(45deg);
-  z-index: -1;
-} */
+#wrapper {
+  width: 100%;
+  align-items: center;
+}
 
-#aboutMe {
-  background: #ccc;
+.content {
+  background-color: white;
+  position: relative;
+  width: 45rem;
+  margin-top: 5rem;
+  padding: 1rem;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+  font-family: "Cabin", sans-serif;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+#textAboutMe {
+  background-color: rgb(255, 255, 255);
+}
+
+.carlitoface {
+  background-image: url(img/carlito.jpeg);
+  background-size: cover;
+  border-radius: 25% 10%;
+  border: 0.2rem solid #520482;
+}
+.findusface {
+  background-image: url(img/findus.JPG);
+  background-size: cover;
+}
+.willeface {
+  background-image: url(img/wille.jpeg);
+  background-size: cover;
+}
+
+#myface {
+  width: 10rem;
+  height: 10rem;
+}
+
+#cats {
+  height: 3rem;
+  width: 6rem;
+  position: absolute;
+  top: -3rem;
+  right: 20px;
+}
+#findus {
+  background-image: url(img/findus-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 3rem;
+}
+#wille {
+  background-image: url(img/wille-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 3rem;
+  flex: 1;
+}
+
+.courseDiv {
+  background-color: #ffcc88;
+}
+
+.courseHeaders {
+  font-family: "Cabin", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 #activeCourses {
@@ -107,6 +201,7 @@ body {
   width: 100%;
   height: 40px;
   background-color: black;
+  display: none;
 }
 
 #progress {
@@ -126,36 +221,26 @@ body {
   background-color: green;
 }
 
-.carlitoface {
-  background-image: url(img/carlito.jpeg);
-  background-size: cover;
-}
-.findusface {
-  background-image: url(img/findus.JPG);
-  background-size: cover;
-}
-.willeface {
-  background-image: url(img/wille.jpeg);
-  background-size: cover;
-}
-
-#myface {
-  width: 10rem;
-  height: 10rem;
-}
-
-#cats {
-  height: 3rem;
+.tooltip {
   width: 100%;
-  background-color: red;
+  position: absolute;
+  top: -1.5rem;
+  right: 0.5rem;
+  padding: 0.1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: white;
+  border-radius: 6px;
+  z-index: 1;
 }
-#findus {
-  background-image: url(img/findus-icon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#wille {
-  background-image: url(img/wille-icon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: -1;
 }
