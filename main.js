@@ -99,10 +99,15 @@ function addActiveCourses() {
       if (isCourseActive(value.startDate, value.endDate)) {
         document.getElementById("activeCourses").innerHTML += `
       <div>
-      ${value.courseName} <br>
-      ${progressBarFunction(value.startDate, value.endDate)} %
+      ${value.courseName}, ${progressBarFunction(
+          value.startDate,
+          value.endDate
+        )}% </div>
+      <div class="progressBarGenerated">
+      <div class="progressGenerated" style="width:
+      ${progressBarFunction(value.startDate, value.endDate)}%">
       
-      
+      </div>
       </div>`;
       } else {
         document.getElementById("completedCourses").innerHTML += `

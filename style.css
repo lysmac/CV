@@ -57,7 +57,7 @@ h3 {
 }
 
 #splashName {
-  font-size: clamp(1rem, 10vw, 10rem);
+  font-size: clamp(1.6rem, 10vw, 10rem);
   animation: 3s fade;
 }
 
@@ -178,27 +178,25 @@ h3 {
 }
 
 .courseDiv {
-  background-color: #ffcc88;
   gap: 0.5rem;
+  line-height: 1.6rem;
 }
 
 .courseHeaders {
   font-family: "Cabin", sans-serif;
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid black;
 }
 
-#activeCourses {
-  background-color: yellow;
+/* #activeCourses {
 }
 
 #completedCourses {
-  background-color: green;
 }
 
 #remainingCourses {
-  background-color: aquamarine;
-}
+} */
 
 #progressBar {
   width: 100%;
@@ -213,15 +211,15 @@ h3 {
   background-color: green;
 }
 .progressBarGenerated {
-  width: 100%;
-  height: 40px;
-  background-color: black;
+  width: 12rem;
+  height: 1rem;
+  border: 1px solid black;
 }
 
 .progressGenerated {
   height: 100%;
-  width: 10%;
-  background-color: green;
+  border-right: 1px solid black;
+  background-color: rgb(137, 204, 137);
 }
 
 .tooltip {
