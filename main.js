@@ -6,6 +6,7 @@ function main() {
   document.getElementById("progress").style.width = `${progress}%`;
   myEventListeners();
   addActiveCourses();
+  lookForDivs();
 }
 
 function myEventListeners() {
@@ -164,4 +165,21 @@ function isCourseActive(start, stop) {
     isDateActive = false;
   }
   return isDateActive;
+}
+
+function lookForDivs() {
+  Array.from(document.querySelectorAll(".content")).forEach((elem) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          let intersecting = entry.isIntersecting;
+          if (intersecting === true) {
+            elem.classList.add("contentAnimation");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(elem);
+  });
 }
