@@ -5,6 +5,9 @@
   flex-direction: column;
   margin-bottom: 5rem;
   position: relative;
+}
+
+.contentText {
   flex-direction: column-reverse;
 }
 
