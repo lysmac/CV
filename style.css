@@ -11,10 +11,12 @@ body {
   font-size: 1rem;
 }
 body a:link,
-body a:visited,
+body a:visited {
+  text-decoration: none;
+  color: #2a0482;
+}
 body a:hover {
-  text-decoration: underline;
-  color: white;
+  color: #fba700;
 }
 
 h3 {
@@ -25,19 +27,19 @@ h3 {
   position: absolute;
   top: -2.8rem;
   left: 0;
+  color: #2a0482;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: "Cabin", sans-serif;
-  font-weight: bold;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 h5 {
   font-size: 1rem;
   font-family: "Cabin", sans-serif;
-  font-weight: bold;
+  margin: 0;
 }
 
 .flexDirectionRow {
@@ -68,6 +70,13 @@ h5 {
   background-image: linear-gradient(180deg, #5efce8 0%, #736efe 100%);
 
   font-family: "Vollkorn", serif;
+  color: white;
+}
+
+#splashScreen a:link,
+#splashScreen a:visited,
+#splashScreen a:hover {
+  text-decoration: underline;
   color: white;
 }
 
@@ -125,13 +134,14 @@ h5 {
 
 .content {
   background-color: white;
+  line-height: 1.4rem;
   position: relative;
   width: 45rem;
   margin-top: 5rem;
   padding: 1rem;
   border-width: 4px;
   border-style: solid;
-  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+  border-image: linear-gradient(to right, #2a0482, darkorchid) 1;
   font-family: "Cabin", sans-serif;
   opacity: 0;
 }
@@ -150,15 +160,11 @@ h5 {
   }
 }
 
-#textAboutMe {
-  background-color: rgb(255, 255, 255);
-}
-
 .carlitoface {
   background-image: url(img/carlito.jpeg);
   background-size: cover;
-  border-radius: 25% 10%;
-  border: 0.2rem solid #520482;
+
+  border: 0.2rem solid #2a0482;
   margin-bottom: 1rem;
 }
 .findusface {
@@ -168,11 +174,6 @@ h5 {
 .willeface {
   background-image: url(img/wille.jpeg);
   background-size: cover;
-}
-
-#myface {
-  width: 10rem;
-  height: 10rem;
 }
 
 .tooltip {
@@ -220,9 +221,13 @@ h5 {
   height: 3rem;
   flex: 1;
 }
+#aboutMe {
+  margin-left: 1rem;
+}
 
-#contactInformation {
-  /* background-color: #aa5efc; */
+#myface {
+  width: 10rem;
+  height: 10rem;
 }
 
 .contactNames {
@@ -235,17 +240,12 @@ h5 {
   font-size: 1.6rem;
 }
 
-.contactIconsAboutMe a:link,
-.contactIconsAboutMe a:visited,
-.contactIconsAboutMe a:hover {
-  text-decoration: none;
-  color: black;
+.separator {
+  height: 0.25rem;
+  background-image: linear-gradient(45deg, #2a0482 0%, darkorchid 100%);
+  margin: 1.5rem 0 1.5rem 0;
 }
 
-.educationHeaders {
-  border-top: 4px solid;
-  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
-}
 .courseDiv {
   gap: 1rem;
   line-height: 1.6rem;
@@ -267,5 +267,34 @@ h5 {
 .progressGenerated {
   height: 100%;
   border-right: 1px solid black;
-  background-color: rgb(137, 204, 137);
+  background-image: linear-gradient(180deg, #89cc89 0%, #328632 100%);
+}
+
+.projectWrapper {
+  gap: 1rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.projectHeader {
+  display: flex;
+  justify-content: center;
+}
+.projectThumbnail {
+  height: 12rem;
+}
+.projectThumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.projectIcons {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 0.5rem 0;
 }

@@ -1,17 +1,18 @@
 .content {
   width: 90%;
-  padding: 0.2rem;
+  padding: 0.4rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
   position: relative;
+  flex-direction: column-reverse;
 }
 
 #aboutMe {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 2rem;
+  justify-content: space-between;
+  margin-left: 0;
 }
 
 .contactNames {
@@ -26,15 +27,43 @@
 }
 
 #myface {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .courseDiv {
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .courseHeaders {
   border: 0;
+}
+
+.project {
+  align-items: center;
+}
+.projectWrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectThumbnail {
+  height: 12rem;
+}
+
+.projectThumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.projectIcons {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.projectDescription {
+  width: 90%;
 }
