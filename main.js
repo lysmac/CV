@@ -137,13 +137,14 @@ function addActiveCourses() {
  * @returns Hur långt man kommit i en kurs, i procent.
  */
 function progressBarFunction(start, end) {
-  const dagensDatum = new Date();
-  const totalKurslangd = dateDifferential(start, end);
-  const kursProgression = dateDifferential(start, dagensDatum);
+  const totalCourseLenght = dateDifferential(start, end);
+  const courseProgression = dateDifferential(start, currentDate);
 
-  const hurGarDet = convertToPercentage(totalKurslangd, kursProgression);
-  console.log(hurGarDet);
-  return hurGarDet;
+  const currentProgress = convertToPercentage(
+    totalCourseLenght,
+    courseProgression
+  );
+  return currentProgress;
 }
 
 /**
