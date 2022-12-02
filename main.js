@@ -41,22 +41,22 @@ const allMyCourses = [
     endDate: new Date("2022-10-28"),
   },
   {
-    courseName: "JavaScript Grundkurs",
+    courseName: "Javascript Grundkurs",
     startDate: new Date("2022-10-31"),
     endDate: new Date("2023-02-03"),
   },
   {
-    courseName: "JavaScript Fördjupning",
+    courseName: "Javascript Fördjupning",
     startDate: new Date("2023-02-06"),
     endDate: new Date("2023-03-31"),
   },
   {
-    courseName: "Dynamisk Webbutveckling",
+    courseName: "Dynamisk webbutveckling",
     startDate: new Date("2023-04-03"),
     endDate: new Date("2023-06-02"),
   },
   {
-    courseName: "Grafiska verktyg för Gränssnittsdesign",
+    courseName: "Grafiska verktyg för gränssnittsdesign",
     startDate: new Date("2023-06-05"),
     endDate: new Date("2023-08-18"),
   },
@@ -72,7 +72,7 @@ const allMyCourses = [
     endDate: new Date("2023-11-17"),
   },
   {
-    courseName: "Arbetsmetodik för Utvecklare",
+    courseName: "Arbetsmetodik för utvecklare",
     startDate: new Date("2023-11-20"),
     endDate: new Date("2023-12-15"),
   },

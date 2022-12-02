@@ -7,13 +7,11 @@
     <title></title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mobile.css" media="(max-width:50rem)" />
-
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script
       src="https://kit.fontawesome.com/b58d9b0d5f.js"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
   </head>
   <body>
     <div id="splashScreen" class="flexDirectionColumn">
@@ -68,11 +66,46 @@
             <div id="findus"></div>
             <div id="wille"></div>
           </div>
+          <div
+            id="contactInformation"
+            class="flexDirectionColumn contactIconsAboutMe"
+          >
+            <a href="https://www.linkedin.com/in/carlhasselblad/">
+              <div class="flexDirectionRow spaceBetween contactIconsAboutMe">
+                <div class="contactIconsSize">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="contactNames">Carl Hasselblad</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/lysmac">
+              <div class="flexDirectionRow spaceBetween contactIconsAboutMe">
+                <div class="contactIconsSize">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contactNames">lysmac</div>
+              </div>
+            </a>
+
+            <a href="mailto:calle@lysmask.se">
+              <div class="flexDirectionRow spaceBetween contactIconsAboutMe">
+                <div class="contactIconsSize">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contactNames">calle[at]lysmask.se</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="content flexDirectionColumn">
         <h3>Utbildning</h3>
+        <div class="educationHeaders">
+          <h5>2022-2024</h5>
+          <h4>Front End Developer, Medieinstitutet</h4>
+        </div>
         <div class="courseDiv flexDirectionRow">
           <div id="activeCoursesWrapper" class="flexOne">
             <div class="courseHeaders">Aktiva kurser</div>
@@ -86,6 +119,19 @@
             <div class="courseHeaders">Återstående kurser</div>
             <div id="remainingCourses"></div>
           </div>
+        </div>
+        <div class="educationHeaders">
+          <h4>Politicies Kandidatexamen, Göteborgs Universitet</h4>
+          <h5>2013-2017</h5>
+          <h5>
+            Huvudområde Statsvetenskap, inriktning Medie- och
+            kommunikationsvetenskap
+          </h5>
+        </div>
+        <div class="educationHeaders">
+          <h4>Portalens Gymnasium</h4>
+          <h5>2005-2008</h5>
+          <h5>IT-Kommunikation och datasäkerhet</h5>
         </div>
       </div>
 

@@ -27,13 +27,32 @@ h3 {
   left: 0;
 }
 
+h4 {
+  font-size: 1.4rem;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+}
+
 .flexDirectionRow {
   display: flex;
   flex-direction: row;
 }
+
 .flexDirectionColumn {
   display: flex;
   flex-direction: column;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
 }
 
 .flexOne {
@@ -140,6 +159,7 @@ h3 {
   background-size: cover;
   border-radius: 25% 10%;
   border: 0.2rem solid #520482;
+  margin-bottom: 1rem;
 }
 .findusface {
   background-image: url(img/findus.JPG);
@@ -153,73 +173,6 @@ h3 {
 #myface {
   width: 10rem;
   height: 10rem;
-}
-
-#cats {
-  height: 3rem;
-  width: 6rem;
-  position: absolute;
-  top: -3rem;
-  right: 20px;
-}
-#findus {
-  background-image: url(img/findus-icon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  flex: 1;
-  height: 3rem;
-}
-#wille {
-  background-image: url(img/wille-icon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 3rem;
-  flex: 1;
-}
-
-.courseDiv {
-  gap: 0.5rem;
-  line-height: 1.6rem;
-}
-
-.courseHeaders {
-  font-family: "Cabin", sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  border-bottom: 2px solid black;
-}
-
-/* #activeCourses {
-}
-
-#completedCourses {
-}
-
-#remainingCourses {
-} */
-
-#progressBar {
-  width: 100%;
-  height: 40px;
-  background-color: black;
-  display: none;
-}
-
-#progress {
-  height: 100%;
-  width: 10%;
-  background-color: green;
-}
-.progressBarGenerated {
-  width: 12rem;
-  height: 1rem;
-  border: 1px solid black;
-}
-
-.progressGenerated {
-  height: 100%;
-  border-right: 1px solid black;
-  background-color: rgb(137, 204, 137);
 }
 
 .tooltip {
@@ -244,4 +197,75 @@ h3 {
   background-color: white;
   transform: rotate(45deg);
   z-index: -1;
+}
+
+#cats {
+  height: 3rem;
+  width: 6rem;
+  position: absolute;
+  top: -3rem;
+  right: 20px;
+}
+#findus {
+  background-image: url(img/findus-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 3rem;
+}
+#wille {
+  background-image: url(img/wille-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 3rem;
+  flex: 1;
+}
+
+#contactInformation {
+  /* background-color: #aa5efc; */
+}
+
+.contactNames {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contactIconsSize {
+  font-size: 1.6rem;
+}
+
+.contactIconsAboutMe a:link,
+.contactIconsAboutMe a:visited,
+.contactIconsAboutMe a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.educationHeaders {
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+}
+.courseDiv {
+  gap: 1rem;
+  line-height: 1.6rem;
+}
+
+.courseHeaders {
+  font-family: "Cabin", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  border-bottom: 2px solid black;
+}
+
+.progressBarGenerated {
+  width: 12rem;
+  height: 1rem;
+  border: 1px solid black;
+}
+
+.progressGenerated {
+  height: 100%;
+  border-right: 1px solid black;
+  background-color: rgb(137, 204, 137);
 }
