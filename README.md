@@ -6,7 +6,7 @@ Skapa ett interaktivt CV där man presenterar sig själv. Sidan ska vara interak
 
 ## Carl Hasselblad CV-sida
 
-[Länk till sidan](https://lysmac.github.io/Labb2/)
+[Länk till sidan](https://lysmac.github.io/CV/)
 
 Hemsidan består av 4 olika delar:
 
